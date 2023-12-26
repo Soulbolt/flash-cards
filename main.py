@@ -8,6 +8,7 @@ words_to_learn = {}
 current_card = {}
 #--------------------CONSTANTS---------------------#
 BACKGROUND_COLOR = "#B1DDC6"
+#-------------Try Exceptions Edge Cases-----------#
 window = Tk()
 def is_csv_empty(file_path):
     try:
@@ -16,9 +17,6 @@ def is_csv_empty(file_path):
     except pd.errors.EmptyDataError:
         return True # File is empty if EmptyDataError is triggered
 
-
-
-#-------------Try Exceptions Edge Cases-----------#
 try:
 #-------------------LOAD CSV DATA------------------#
     if is_csv_empty("./data/words_to_learn.csv"):
